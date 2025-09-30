@@ -1,17 +1,17 @@
 <?php
 
-namespace Lester\EloquentSalesForce\Tests;
+namespace PabloDias\EloquentSalesForce\Tests;
 
-use Lester\EloquentSalesForce\ServiceProvider;
-use Lester\EloquentSalesForce\SalesForceObject;
-use Lester\EloquentSalesForce\TestLead;
-use Lester\EloquentSalesForce\TestModel;
-use Lester\EloquentSalesForce\TestTask;
-use Lester\EloquentSalesForce\TestUser;
+use PabloDias\EloquentSalesForce\ServiceProvider;
+use PabloDias\EloquentSalesForce\SalesForceObject;
+use PabloDias\EloquentSalesForce\TestLead;
+use PabloDias\EloquentSalesForce\TestModel;
+use PabloDias\EloquentSalesForce\TestTask;
+use PabloDias\EloquentSalesForce\TestUser;
 use Orchestra\Testbench\TestCase;
 use Illuminate\Support\Facades\Config;
-use Lester\EloquentSalesForce\Facades\SObjects;
-use Lester\EloquentSalesForce\Database\SOQLBatch;
+use PabloDias\EloquentSalesForce\Facades\SObjects;
+use PabloDias\EloquentSalesForce\Database\SOQLBatch;
 use Illuminate\Support\Str;
 use Illuminate\Support\Arr;
 use PHPUnit\Framework\Error\Notice;
@@ -21,8 +21,8 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Forrest;
 use GuzzleHttp\Client;
 use Carbon\Carbon;
-use Lester\EloquentSalesForce\Exceptions\MalformedQueryException;
-use Lester\EloquentSalesForce\Exceptions\RestAPIException;
+use PabloDias\EloquentSalesForce\Exceptions\MalformedQueryException;
+use PabloDias\EloquentSalesForce\Exceptions\RestAPIException;
 
 class EloquentSalesForceTest extends TestCase
 {
@@ -208,7 +208,7 @@ class EloquentSalesForceTest extends TestCase
             'eloquent_sf.syncTwoWay' => true,
             'eloquent_sf.syncPriority' => 'local',
             'eloquent_sf.syncTwoWayModels' => [
-                'Lester\EloquentSalesForce\TestModel',
+                'PabloDias\EloquentSalesForce\TestModel',
             ],
         ]);
 
@@ -271,8 +271,8 @@ class EloquentSalesForceTest extends TestCase
     }
 
     /**
-     * @covers Lester\EloquentSalesForce\Database\SOQLBuilder::insert
-     * @covers Lester\EloquentSalesForce\SObjects::update
+     * @covers PabloDias\EloquentSalesForce\Database\SOQLBuilder::insert
+     * @covers PabloDias\EloquentSalesForce\SObjects::update
      */
     public function testObjectMass()
     {
@@ -317,9 +317,9 @@ class EloquentSalesForceTest extends TestCase
     }
 
     /*
-	 * @covers Lester\EloquentSalesForce\Model
-	 * @covers Lester\EloquentSalesForce\Model::save
-	 * @covers Lester\EloquentSalesForce\Model::update
+	 * @covers PabloDias\EloquentSalesForce\Model
+	 * @covers PabloDias\EloquentSalesForce\Model::save
+	 * @covers PabloDias\EloquentSalesForce\Model::update
 	 */
     public function testObjectUpdate()
     {
@@ -351,8 +351,8 @@ class EloquentSalesForceTest extends TestCase
     }
 
     /**
-	 * @covers Lester\EloquentSalesForce\Database\SOQLGrammar
-	 * @covers Lester\EloquentSalesForce\Database\SOQLGrammar::whereBasic
+	 * @covers PabloDias\EloquentSalesForce\Database\SOQLGrammar
+	 * @covers PabloDias\EloquentSalesForce\Database\SOQLGrammar::whereBasic
 	 */
     public function testWhereBasic()
     {
@@ -373,8 +373,8 @@ class EloquentSalesForceTest extends TestCase
     }
 
     /*
-     * @covers Lester\EloquentSalesForce\Database\SOQLGrammar
-     * @covers Lester\EloquentSalesForce\Database\SOQLGrammar::whereBoolean
+     * @covers PabloDias\EloquentSalesForce\Database\SOQLGrammar
+     * @covers PabloDias\EloquentSalesForce\Database\SOQLGrammar::whereBoolean
      */
     public function testWhereBoolean()
     {
@@ -385,8 +385,8 @@ class EloquentSalesForceTest extends TestCase
     }
 
     /*
-     * @covers Lester\EloquentSalesForce\Database\SOQLGrammar
-     * @covers Lester\EloquentSalesForce\Database\SOQLGrammar::whereIn
+     * @covers PabloDias\EloquentSalesForce\Database\SOQLGrammar
+     * @covers PabloDias\EloquentSalesForce\Database\SOQLGrammar::whereIn
      */
     public function testWhereIn()
     {
@@ -411,8 +411,8 @@ class EloquentSalesForceTest extends TestCase
     }
 
     /**
-	 * @covers Lester\EloquentSalesForce\Database\SOQLGrammar
-	 * @covers Lester\EloquentSalesForce\Database\SOQLGrammar::whereDate
+	 * @covers PabloDias\EloquentSalesForce\Database\SOQLGrammar
+	 * @covers PabloDias\EloquentSalesForce\Database\SOQLGrammar::whereDate
 	 */
     public function testWhereDate()
     {
@@ -461,8 +461,8 @@ class EloquentSalesForceTest extends TestCase
     }
 
     /*
-	 * @covers Lester\EloquentSalesForce\Model
-	 * @covers Lester\EloquentSalesForce\Model::delete
+	 * @covers PabloDias\EloquentSalesForce\Model
+	 * @covers PabloDias\EloquentSalesForce\Model::delete
 	 */
     public function testObjectDelete()
     {
@@ -474,11 +474,11 @@ class EloquentSalesForceTest extends TestCase
     }
 
     /*
-	 * @covers Lester\EloquentSalesForce\Model
-	 * @covers Lester\EloquentSalesForce\Model::belongsTo
-	 * @covers Lester\EloquentSalesForce\Model::hasMany
-	 * @covers Lester\EloquentSalesForce\Database\SOQLHasMany
-	 * @covers Lester\EloquentSalesForce\Database\SOQLHasOneOrMany
+	 * @covers PabloDias\EloquentSalesForce\Model
+	 * @covers PabloDias\EloquentSalesForce\Model::belongsTo
+	 * @covers PabloDias\EloquentSalesForce\Model::hasMany
+	 * @covers PabloDias\EloquentSalesForce\Database\SOQLHasMany
+	 * @covers PabloDias\EloquentSalesForce\Database\SOQLHasOneOrMany
 	 */
     public function testRelationships()
     {
@@ -513,8 +513,8 @@ class EloquentSalesForceTest extends TestCase
     }*/
 
     /*
-	 * @covers Lester\EloquentSalesForce\Model
-	 * @covers Lester\EloquentSalesForce\Database\SOQLGrammar::compileJoins
+	 * @covers PabloDias\EloquentSalesForce\Model
+	 * @covers PabloDias\EloquentSalesForce\Database\SOQLGrammar::compileJoins
 	 */
     public function testJoins()
     {
@@ -533,8 +533,8 @@ class EloquentSalesForceTest extends TestCase
     }
 
     /*
-	 * @covers Lester\EloquentSalesForce\Model
-	 * @covers Lester\EloquentSalesForce\Database\SOQLBuilder::paginate
+	 * @covers PabloDias\EloquentSalesForce\Model
+	 * @covers PabloDias\EloquentSalesForce\Database\SOQLBuilder::paginate
 	 */
     public function testPaginate()
     {
@@ -547,8 +547,8 @@ class EloquentSalesForceTest extends TestCase
     }
 
     /*
-     * @covers Lester\EloquentSalesForce\Model::getPicklistValues
-     * @covers Lester\EloquentSalesForce\SObjects::getPicklistValues
+     * @covers PabloDias\EloquentSalesForce\Model::getPicklistValues
+     * @covers PabloDias\EloquentSalesForce\SObjects::getPicklistValues
      */
     public function testGetPicklistValues()
     {
@@ -579,10 +579,10 @@ class EloquentSalesForceTest extends TestCase
     }
 
     /**
-     * @covers Lester\EloquentSalesForce\SObjects::object
-     * @covers Lester\EloquentSalesForce\SObjects::convert
-     * @covers Lester\EloquentSalesForce\SObjects::is_uppercase
-     * @covers Lester\EloquentSalesForce\SObjects::describe
+     * @covers PabloDias\EloquentSalesForce\SObjects::object
+     * @covers PabloDias\EloquentSalesForce\SObjects::convert
+     * @covers PabloDias\EloquentSalesForce\SObjects::is_uppercase
+     * @covers PabloDias\EloquentSalesForce\SObjects::describe
      */
     public function testFacadeFuncs()
     {
@@ -593,7 +593,7 @@ class EloquentSalesForceTest extends TestCase
         $query = \Forrest::query('select Id from Lead limit 1');
 
         $object = SObjects::object($query['records'][0]);
-        $this->assertInstanceOf('Lester\EloquentSalesForce\SalesForceObject', $object);
+        $this->assertInstanceOf('PabloDias\EloquentSalesForce\SalesForceObject', $object);
 
         $testLeadFields = SObjects::describe('Product2');
 

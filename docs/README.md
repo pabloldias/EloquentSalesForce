@@ -102,7 +102,7 @@ Replace the `use` statement so your model looks like:
 
 namespace App;
 
-use Lester\EloquentSalesForce\Model;
+use PabloDias\EloquentSalesForce\Model;
 
 class Lead extends Model
 {
@@ -383,10 +383,10 @@ Use this if you want to keep a local table, or just some fields, in sync with an
 ```php
 <?php
 
-namespace Lester\EloquentSalesForce;
+namespace PabloDias\EloquentSalesForce;
 
 use Illuminate\Database\Eloquent\Model;
-use Lester\EloquentSalesForce\Traits\SyncsWithSalesforce;
+use PabloDias\EloquentSalesForce\Traits\SyncsWithSalesforce;
 
 class SalesLead extends Model
 {
@@ -456,7 +456,7 @@ To use custom objects (or an object with a special object name, different from t
 
 namespace App;
 
-use Lester\EloquentSalesForce\Model;
+use PabloDias\EloquentSalesForce\Model;
 
 class TouchPoint extends Model
 {
@@ -575,7 +575,7 @@ $leads = collect($queryResult['records'])->map(function($record) {
 
 ```
 
-The class used for each object returned will be `Lester\EloquentSalesForce\SalesForceObject`.
+The class used for each object returned will be `PabloDias\EloquentSalesForce\SalesForceObject`.
 
 You can also query directly against the object like so:
 
