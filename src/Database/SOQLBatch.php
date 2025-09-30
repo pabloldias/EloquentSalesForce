@@ -1,17 +1,17 @@
 <?php
 
-namespace Lester\EloquentSalesForce\Database;
+namespace PabloDias\EloquentSalesForce\Database;
 
 use Session;
 use Log;
 use Illuminate\Support\Str;
 use Illuminate\Support\Arr;
-use Lester\EloquentSalesForce\SalesForceObject;
+use PabloDias\EloquentSalesForce\SalesForceObject;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
-use Lester\EloquentSalesForce\Database\SOQLBuilder as Builder;
-use Lester\EloquentSalesForce\Database\SOQLHasMany as HasMany;
-use Lester\EloquentSalesForce\Database\SOQLHasOne as HasOne;
-use Lester\EloquentSalesForce\Facades\SObjects;
+use PabloDias\EloquentSalesForce\Database\SOQLBuilder as Builder;
+use PabloDias\EloquentSalesForce\Database\SOQLHasMany as HasMany;
+use PabloDias\EloquentSalesForce\Database\SOQLHasOne as HasOne;
+use PabloDias\EloquentSalesForce\Facades\SObjects;
 use Illuminate\Support\Collection;
 
 class SOQLBatch extends Collection

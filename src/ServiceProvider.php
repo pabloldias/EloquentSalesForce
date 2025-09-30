@@ -1,13 +1,13 @@
 <?php
 
-namespace Lester\EloquentSalesForce;
+namespace PabloDias\EloquentSalesForce;
 
-use Lester\EloquentSalesForce\Facades\SObjects as SfFacade;
+use PabloDias\EloquentSalesForce\Facades\SObjects as SfFacade;
 use Illuminate\Support\Arr;
-use Lester\EloquentSalesForce\Console\MakeModelCommand;
-use Lester\EloquentSalesForce\Console\SyncFromSalesforce;
-use Lester\EloquentSalesForce\TestLead;
-use Lester\EloquentSalesForce\TestObserver;
+use PabloDias\EloquentSalesForce\Console\MakeModelCommand;
+use PabloDias\EloquentSalesForce\Console\SyncFromSalesforce;
+use PabloDias\EloquentSalesForce\TestLead;
+use PabloDias\EloquentSalesForce\TestObserver;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -53,7 +53,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
 		$loader = \Illuminate\Foundation\AliasLoader::getInstance();
 		$loader->alias('Forrest', 'Omniphx\Forrest\Providers\Laravel\Facades\Forrest');
-		$loader->alias('SObjects', 'Lester\EloquentSalesForce\Facades\SObjects');
+		$loader->alias('SObjects', 'PabloDias\EloquentSalesForce\Facades\SObjects');
 	}
 
 	/**

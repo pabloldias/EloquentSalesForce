@@ -1,17 +1,17 @@
 <?php
 
-namespace Lester\EloquentSalesForce\Database;
+namespace PabloDias\EloquentSalesForce\Database;
 
 use Illuminate\Database\Eloquent\Builder as Builder;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Pagination\Paginator;
-use Lester\EloquentSalesForce\ServiceProvider;
-use Lester\EloquentSalesForce\Facades\SObjects;
+use PabloDias\EloquentSalesForce\ServiceProvider;
+use PabloDias\EloquentSalesForce\Facades\SObjects;
 use Illuminate\Support\Str;
 use Illuminate\Support\Arr;
 use PDO;
 use Closure;
-use Lester\EloquentSalesForce\Model;
+use PabloDias\EloquentSalesForce\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 
 

@@ -3,7 +3,7 @@
 namespace {{ namespace }};
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Lester\EloquentSalesForce\Model;
+use PabloDias\EloquentSalesForce\Model;
 
 class {{ class }} extends Model
 {

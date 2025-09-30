@@ -1,9 +1,9 @@
 <?php
 
-namespace Lester\EloquentSalesForce\Database;
+namespace PabloDias\EloquentSalesForce\Database;
 
-use Lester\EloquentSalesForce\Model;
-use Lester\EloquentSalesForce\Facades\SObjects;
+use PabloDias\EloquentSalesForce\Model;
+use PabloDias\EloquentSalesForce\Facades\SObjects;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\Relation;

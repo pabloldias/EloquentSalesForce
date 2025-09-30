@@ -1,12 +1,12 @@
 <?php
 
-namespace Lester\EloquentSalesForce\Traits;
+namespace PabloDias\EloquentSalesForce\Traits;
 
-use Lester\EloquentSalesForce\Facades\SObjects;
+use PabloDias\EloquentSalesForce\Facades\SObjects;
 use Illuminate\Support\Str;
 use Illuminate\Support\Arr;
-use Lester\EloquentSalesForce\Observers\Syncronizer;
-use Lester\EloquentSalesForce\SalesForceObject;
+use PabloDias\EloquentSalesForce\Observers\Syncronizer;
+use PabloDias\EloquentSalesForce\SalesForceObject;
 
 trait SyncsWithSalesforce
 {

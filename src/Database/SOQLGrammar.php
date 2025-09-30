@@ -1,6 +1,6 @@
 <?php
 
-namespace Lester\EloquentSalesForce\Database;
+namespace PabloDias\EloquentSalesForce\Database;
 
 use Carbon\Carbon;
 use Illuminate\Database\Query\Builder;
@@ -8,8 +8,8 @@ use Illuminate\Database\Query\Grammars\Grammar;
 use Illuminate\Database\Query\JsonExpression;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
-use Lester\EloquentSalesForce\Facades\SObjects;
-use Lester\EloquentSalesForce\ServiceProvider;
+use PabloDias\EloquentSalesForce\Facades\SObjects;
+use PabloDias\EloquentSalesForce\ServiceProvider;
 
 class SOQLGrammar extends Grammar
 {

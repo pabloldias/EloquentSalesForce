@@ -1,6 +1,6 @@
 <?php
 
-namespace Lester\EloquentSalesForce\Exceptions;
+namespace PabloDias\EloquentSalesForce\Exceptions;
 
 use Exception;
 

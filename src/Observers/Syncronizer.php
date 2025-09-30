@@ -1,6 +1,6 @@
 <?php
 
-namespace Lester\EloquentSalesForce\Observers;
+namespace PabloDias\EloquentSalesForce\Observers;
 
 class Syncronizer
 {
