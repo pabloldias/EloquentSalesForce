@@ -2,17 +2,17 @@
 
 namespace PabloDias\EloquentSalesForce\Database;
 
+use Closure;
 use Illuminate\Database\Eloquent\Builder as Builder;
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Pagination\Paginator;
-use PabloDias\EloquentSalesForce\ServiceProvider;
-use PabloDias\EloquentSalesForce\Facades\SObjects;
-use Illuminate\Support\Str;
 use Illuminate\Support\Arr;
-use PDO;
-use Closure;
+use Illuminate\Support\Str;
+use PabloDias\EloquentSalesForce\Facades\SObjects;
 use PabloDias\EloquentSalesForce\Model;
-use Illuminate\Database\Eloquent\Relations\Relation;
+use PabloDias\EloquentSalesForce\ServiceProvider;
+use PDO;
 
 
 class SOQLBuilder extends Builder
@@ -28,7 +28,7 @@ class SOQLBuilder extends Builder
         //$pdo = new \Illuminate\Database\PDO\Connection($pdo);
 
 		$query->connection = new SOQLConnection();
-		$query->grammar = new SOQLGrammar();
+		$query->grammar = new SOQLGrammar($query->connection);
         $query->connection->setGrammar($query->grammar);
 
 		parent::__construct($query);
