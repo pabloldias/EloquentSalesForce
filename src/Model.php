@@ -1,6 +1,6 @@
 <?php
 
-namespace Lester\EloquentSalesForce;
+namespace PabloDias\EloquentSalesForce;
 
 use Session;
 use Log;
@@ -8,10 +8,10 @@ use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
-use Lester\EloquentSalesForce\Database\SOQLBuilder as Builder;
-use Lester\EloquentSalesForce\Database\SOQLHasMany as HasMany;
-use Lester\EloquentSalesForce\Database\SOQLHasOne as HasOne;
-use Lester\EloquentSalesForce\Facades\SObjects;
+use PabloDias\EloquentSalesForce\Database\SOQLBuilder as Builder;
+use PabloDias\EloquentSalesForce\Database\SOQLHasMany as HasMany;
+use PabloDias\EloquentSalesForce\Database\SOQLHasOne as HasOne;
+use PabloDias\EloquentSalesForce\Facades\SObjects;
 
 abstract class Model extends EloquentModel
 {
@@ -268,7 +268,7 @@ abstract class Model extends EloquentModel
 	 * @param  string  $related
 	 * @param  string  $foreignKey
 	 * @param  string  $localKey
-	 * @return \Lester\EloquentSalesForce\Database\SOQLHasMany
+	 * @return \PabloDias\EloquentSalesForce\Database\SOQLHasMany
 	 */
 	public function hasMany($related, $foreignKey = null, $localKey = null)
 	{
@@ -331,7 +331,7 @@ abstract class Model extends EloquentModel
 	 * @param  \Illuminate\Database\Eloquent\Model  $parent
 	 * @param  string  $foreignKey
 	 * @param  string  $localKey
-	 * @return \Lester\EloquentSalesForce\Database\SOQLHasMany
+	 * @return \PabloDias\EloquentSalesForce\Database\SOQLHasMany
 	 */
 	protected function newSOQLHasMany(Builder $query, Model $parent, $foreignKey, $localKey)
 	{

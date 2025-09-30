@@ -1,6 +1,6 @@
 <?php
 
-namespace Lester\EloquentSalesForce\Exceptions;
+namespace PabloDias\EloquentSalesForce\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Database\Eloquent\ModelNotFoundException;

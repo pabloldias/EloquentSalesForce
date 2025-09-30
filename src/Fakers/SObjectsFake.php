@@ -1,8 +1,8 @@
 <?php
 
-namespace Lester\EloquentSalesForce\Fakers;
+namespace PabloDias\EloquentSalesForce\Fakers;
 
-use Lester\EloquentSalesForce\SObjects;
+use PabloDias\EloquentSalesForce\SObjects;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 class SObjectsFake

@@ -1,9 +1,9 @@
 <?php
 
-namespace Lester\EloquentSalesForce;
+namespace PabloDias\EloquentSalesForce;
 
 use Illuminate\Database\Eloquent\Model;
-use Lester\EloquentSalesForce\Traits\SyncsWithSalesforce;
+use PabloDias\EloquentSalesForce\Traits\SyncsWithSalesforce;
 use Illuminate\Support\Str;
 
 class TestModel extends Model

@@ -1,13 +1,13 @@
 <?php
 
-namespace Lester\EloquentSalesForce;
+namespace PabloDias\EloquentSalesForce;
 
 /** @scrutinizer ignore-call */use Forrest;
 use Omniphx\Forrest\Exceptions\MissingTokenException;
 use Omniphx\Forrest\Exceptions\MissingResourceException;
 use Omniphx\Forrest\Exceptions\MissingVersionException;
 use Omniphx\Forrest\Exceptions\SalesforceException;
-use Lester\EloquentSalesForce\Database\SOQLBatch;
+use PabloDias\EloquentSalesForce\Database\SOQLBatch;
 use Illuminate\Support\Str;
 use Illuminate\Support\Arr;
 use Cache;

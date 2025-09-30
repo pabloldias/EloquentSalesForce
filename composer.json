@@ -1,5 +1,5 @@
 {
-  "name": "rob-lester-jr04/eloquent-sales-force",
+  "name": "pabloldias/eloquent-sales-force",
   "description": "An eloquent model data source for Salesforce",
   "license": "MIT",
   "keywords": [
@@ -17,27 +17,31 @@
     {
       "name": "Robert Lester",
       "email": "roblesterjr04@gmail.com"
+    },
+    {
+      "name": "Pablo Dias",
+      "email": "pablo.dias@pfizer.com"
     }
   ],
   "require": {
-    "php": "^7.4 || ^8.0 || ^8.1",
-    "guzzlehttp/guzzle": "^6.0 || ^7.0",
-    "laravel/framework": "^6.0 || ^7.0 || ^8.40.0 || ^9.0 || ^10.0 || ^11.0" ,
+    "php": "^8.2",
+    "guzzlehttp/guzzle": "^7.0",
+    "laravel/framework": "^11.0 || ^12.0" ,
     "omniphx/forrest": "^2.0"
   },
   "require-dev": {
-    "laravel/dusk": "^6.19 || ^7.0 || ^8.0",
-    "orchestra/testbench": "^3.8 || ^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.0",
-    "phpunit/phpunit": ">=6.0 || >=10.0"
+    "laravel/dusk": "^8.0",
+    "orchestra/testbench": "^9.0 || ^10.0",
+    "phpunit/phpunit": ">=10.0"
   },
   "autoload": {
     "psr-4": {
-      "Lester\\EloquentSalesForce\\": "src"
+      "PabloDias\\EloquentSalesForce\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Lester\\EloquentSalesForce\\Tests\\": "tests"
+      "PabloDias\\EloquentSalesForce\\Tests\\": "tests"
     },
     "files": [
       "vendor/phpunit/phpunit/src/Framework/Assert/Functions.php"
@@ -53,7 +57,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Lester\\EloquentSalesForce\\ServiceProvider"
+        "PabloDias\\EloquentSalesForce\\ServiceProvider"
       ]
     }
   },

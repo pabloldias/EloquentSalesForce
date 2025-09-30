@@ -1,6 +1,6 @@
 <?php
 
-namespace Lester\EloquentSalesForce;
+namespace PabloDias\EloquentSalesForce;
 
 class TestObserver
 {

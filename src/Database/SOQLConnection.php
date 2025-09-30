@@ -1,6 +1,6 @@
 <?php
 
-namespace Lester\EloquentSalesForce\Database;
+namespace PabloDias\EloquentSalesForce\Database;
 
 use Illuminate\Database\Connection;
 use Illuminate\Database\Schema\MySqlBuilder;
@@ -8,14 +8,14 @@ use Illuminate\Database\Query\Processors\MySqlProcessor;
 use Illuminate\Database\Query\Grammars\MySqlGrammar as QueryGrammar;
 use Illuminate\Database\Schema\Grammars\MySqlGrammar as SchemaGrammar;
 use Omniphx\Forrest\Exceptions\MissingResourceException;
-use Lester\EloquentSalesForce\Facades\SObjects;
+use PabloDias\EloquentSalesForce\Facades\SObjects;
 use Closure;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use DateTimeInterface;
 use Illuminate\Support\Carbon as SupportCarbon;
 use Omniphx\Forrest\Exceptions\SalesforceException;
-use Lester\EloquentSalesForce\Exceptions;
+use PabloDias\EloquentSalesForce\Exceptions;
 
 class SOQLConnection extends Connection
 {

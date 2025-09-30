@@ -1,6 +1,6 @@
 <?php
 
-namespace Lester\EloquentSalesForce\Console;
+namespace PabloDias\EloquentSalesForce\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;

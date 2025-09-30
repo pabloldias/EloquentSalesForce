@@ -1,9 +1,9 @@
 <?php
 
-namespace Lester\EloquentSalesForce\Facades;
+namespace PabloDias\EloquentSalesForce\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Lester\EloquentSalesForce\Fakers\SObjectsFake;
+use PabloDias\EloquentSalesForce\Fakers\SObjectsFake;
 
 class SObjects extends Facade
 {
